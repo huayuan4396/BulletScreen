@@ -5,7 +5,7 @@ import time
 import random
 from concurrent.futures import ThreadPoolExecutor
 import json
-
+import util
 
 class Spider():
     def __init__(self, bv_name):
@@ -35,7 +35,7 @@ class Spider():
         
         
 if __name__ == '__main__':
-    bv_name = 'BV1gG41127D9'
+    bv_name = 'BV1rN411H7UV'
     spider = Spider(bv_name=bv_name)
     
     # get cid
@@ -52,8 +52,9 @@ if __name__ == '__main__':
     print(f'bullet number: {len(bullet_list)}')
     
     # write to file
-    with open(f'./front/public/bullets/{bv_name}.json', 'w') as file:
+    with open(f'./front/public/bullets/{bv_name}_bullet.json', 'w') as file:
         json.dump({'bullet_list': bullet_list}, file, ensure_ascii=False)
+    util.get_high_freq_word_list(bv_name)
     
     
     
