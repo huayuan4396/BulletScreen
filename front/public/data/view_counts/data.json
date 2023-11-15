@@ -1,0 +1,18 @@
+{
+    "data": [
+        {"name": "动画", "play": 98065665, "bullet": 84232, "coin": 1446993, "like": 6349824, "share": 385524, "favourite": 2926687},
+        {"name": "动物圈", "play": 84814896, "bullet": 73234, "coin": 344380, "like": 5665809, "share": 310384, "favourite": 912589},
+        {"name": "鬼畜", "play": 75539725, "bullet": 55896, "coin": 1077431, "like": 6349856, "share": 465656, "favourite": 1536067},
+        {"name": "科技", "play": 44270168, "bullet": 91684, "coin": 476797, "like": 1772349, "share": 116813, "favourite": 1003032},
+        {"name": "美食", "play": 84807043, "bullet": 125042, "coin": 493487, "like": 4535365, "share": 171152, "favourite": 768706},
+        {"name": "汽车", "play": 46081589, "bullet": 55245, "coin": 181829, "like": 1805252, "share": 95973, "favourite": 323322},
+        {"name": "生活", "play": 137074371, "bullet": 192614, "coin": 1857882, "like": 12868776, "share": 512515, "favourite": 1691873},
+        {"name": "时尚", "play": 90308902, "bullet": 41476, "coin": 338004, "like": 5820093, "share": 209705, "favourite": 1446931},
+        {"name": "舞蹈", "play": 47680400, "bullet": 33211, "coin": 465696, "like": 5146768, "share": 240445, "favourite": 961809},
+        {"name": "音乐", "play": 60649391, "bullet": 100519, "coin": 1169207, "like": 4065447, "share": 355685, "favourite": 3181641},
+        {"name": "影视", "play": 130185918, "bullet": 172460, "coin": 758918, "like": 6481342, "share": 260051, "favourite": 1570363},
+        {"name": "娱乐", "play": 34841714, "bullet": 233506, "coin": 175395, "like": 1798095, "share": 115876, "favourite": 453900},
+        {"name": "运动", "play": 70113440, "bullet": 62741, "coin": 211266, "like": 3309587, "share": 190375, "favourite": 529483},
+        {"name": "知识", "play": 108873579, "bullet": 220503, "coin": 2215761, "like": 7215165, "share": 389558, "favourite": 3329516}
+    ]
+}

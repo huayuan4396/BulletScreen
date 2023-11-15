@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* mine */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  height: 40;
+  padding: 2px;
+  font: 15px Helvetica;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 2px;
+  pointer-events: none;
+}
