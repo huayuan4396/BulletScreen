@@ -11,7 +11,7 @@ export class ViewCountChart extends React.Component {
     state = {data: null, loading: true, attr_idx: 0}
 
     attr_name_list = ["play", "bullet", "coin", "like", "share", "favourite"]
-    color_list = ["#8fa8c4", "#f6b57d", "#ea9495", "#a6cfcb", "#f3da8c", "#d0cac7"]
+    color_list = ["#a6cfcb", "#8fa8c4", "#ea9495", "#f6b57d", "#f3da8c", "#d0cac7"]
 
     componentDidMount() {
         fetch(process.env.PUBLIC_URL + '/data/view_counts/data.json')

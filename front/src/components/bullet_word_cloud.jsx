@@ -3,7 +3,7 @@ var d3 = require("d3"), cloud = require("d3-cloud");
 
 export class BulletWordCloud extends React.Component {
     state = {word_list: null, loading: true}
-    color_list = ["#abc548", "#c71931", "#e66474", "#decc74", "#444444"]
+    color_list = ["#c71931", "#abc548", "#e66474", "#decc74", "#444444"]
     rotate_list = [40, -50, 0]
 
     componentDidMount() {
