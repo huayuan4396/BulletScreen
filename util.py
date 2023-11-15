@@ -39,23 +39,23 @@ def get_high_freq_word_list(bv_name, topk=100):
 
 
 if __name__ == '__main__':
-    # print(get_high_freq_word_list('BV1gG41127D9'))
-    with open('./tag_dict.csv', 'r', encoding='gbk') as f:
-        reader = csv.reader(f)
-        tag_name = None
-        tag_count = None
-        for row_idx, row in enumerate(reader):
-            if row_idx == 0:
-                tag_name = row
-            else:
-                tag_count = row
+    print(get_high_freq_word_list('BV1gG41127D9'))
+    # with open('./tag_dict.csv', 'r', encoding='gbk') as f:
+    #     reader = csv.reader(f)
+    #     tag_name = None
+    #     tag_count = None
+    #     for row_idx, row in enumerate(reader):
+    #         if row_idx == 0:
+    #             tag_name = row
+    #         else:
+    #             tag_count = row
         
-        data = []
-        for i in range(len(tag_name)):
-            data.append([tag_name[i], tag_count[i]])
+    #     data = []
+    #     for i in range(len(tag_name)):
+    #         data.append([tag_name[i], tag_count[i]])
             
-        data = sorted(data, key=lambda x: -int(x[1]))
+    #     data = sorted(data, key=lambda x: -int(x[1]))
         
-        with open(f'./front/public/data/hot_tag/data.json', 'w') as file:
-            json.dump({'word_list': data[:150]}, file, ensure_ascii=False)
+    #     with open(f'./front/public/data/hot_tag/data.json', 'w') as file:
+    #         json.dump({'word_list': data[:150]}, file, ensure_ascii=False)
         
