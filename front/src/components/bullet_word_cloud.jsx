@@ -3,6 +3,8 @@ var d3 = require("d3"), cloud = require("d3-cloud");
 
 export class BulletWordCloud extends React.Component {
     state = {word_list: null, loading: true}
+    color_list = ["#abc548", "#c71931", "#e66474", "#decc74", "#444444"]
+    rotate_list = [40, -50, 0]
 
     componentDidMount() {
         fetch(process.env.PUBLIC_URL + '/bullets/BV1yu4y1r7mL_word.json')
@@ -18,7 +20,7 @@ export class BulletWordCloud extends React.Component {
             .size([500, 500])
             .words(this.state.word_list.map((d) => {return {text: d[0], size: 10 + d[1] * 0.6};}))
             .padding(1)
-            .rotate(() => (Math.random() - 0.5) * 90)
+            .rotate((d, i) => this.rotate_list[i % this.rotate_list.length])
             .font("Impact")
             .fontSize((d) => d.size)
             .on("end", this.draw.bind(this));
@@ -37,6 +39,7 @@ export class BulletWordCloud extends React.Component {
           .enter().append("text")
             .style("font-size", (d) => d.size + "px")
             .style("font-family", "Impact")
+            .style("fill", (d, i) => this.color_list[i % this.color_list.length])
             .attr("text-anchor", "middle")
             .attr("transform", (d) => {
               return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";

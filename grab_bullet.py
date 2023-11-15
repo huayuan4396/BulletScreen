@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import json
 import util
 
-class Spider():
+class BulletSpider():
     def __init__(self, bv_name):
         self.bv_name = bv_name
         self.video_url = f'https://www.bilibili.com/video/{bv_name}'
@@ -36,7 +36,7 @@ class Spider():
         
 if __name__ == '__main__':
     bv_name = 'BV1rN411H7UV'
-    spider = Spider(bv_name=bv_name)
+    spider = BulletSpider(bv_name=bv_name)
     
     # get cid
     cid = None
