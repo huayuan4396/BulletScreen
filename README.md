@@ -1,4 +1,4 @@
 # BulletScreen
 
-<img src="https://github.com/huayuan4396/BulletScreen/assets/110151316/9ef336c6-be23-435b-8555-6b2d42948dae" style="zoom:50%;" />
+<img src="https://github.com/huayuan4396/BulletScreen/assets/110151316/c3b8d488-5bf6-4b37-b185-1d2589eea0e1" style="zoom:100%;" />
 
