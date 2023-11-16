@@ -19,7 +19,7 @@ export class Root extends React.Component {
             return (
                 <div>
                     <SwitchButton onStateChange={this.onButtonStateChange}/>
-                    <WordCloud id="bullet_word_cloud" data_dir="/data/bullets/BV1yu4y1r7mL_word.json" color_list={["#c71931", "#abc548", "#e66474", "#decc74", "#444444"]}/>
+                    <WordCloud id="bullet_word_cloud" data_dir="/data/bullets/BV1rN411H7UV_word.json" color_list={["#c71931", "#abc548", "#e66474", "#decc74", "#444444"]} size_mul={5}/>
                 </div>
             );
         }
@@ -28,7 +28,7 @@ export class Root extends React.Component {
             return (
                 <div>
                     <SwitchButton onStateChange={this.onButtonStateChange}/>
-                    <WordCloud id="hot_tag_word_cloud" data_dir="/data/hot_tag/data.json" color_list={["#3b8291", "#cc1b1b", "#91553b", "#171717"]}/>
+                    <WordCloud id="hot_tag_word_cloud" data_dir="/data/hot_tag/data.json" color_list={["#3b8291", "#cc1b1b", "#91553b", "#171717"]} size_mul={1}/>
                 </div>
             );
         }

@@ -11,6 +11,7 @@ export class WordCloud extends React.Component {
             .then((response) => response.json())
             .then((word_list) => {
                 word_list = word_list.word_list;
+                console.log(word_list);
                 this.setState({ word_list, loading: false }, () => {this.drawCloud();});
             });
     }
@@ -33,7 +34,7 @@ export class WordCloud extends React.Component {
     drawCloud = () => {
         let layout = cloud()
             .size([800, 600])
-            .words(this.state.word_list.map((d) => {return {text: d[0], size: 20 + d[1] / 1};}))
+            .words(this.state.word_list.map((d) => {return {text: d[0], size: 20 + d[1] / this.props.size_mul};}))
             .padding(1)
             .rotate((d, i) => this.rotate_list[i % this.rotate_list.length])
             .font("Helvetica")

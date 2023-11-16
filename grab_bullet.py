@@ -14,6 +14,7 @@ class BulletSpider():
         
     def get_cid(self):
         response = requests.get(self.video_url)
+        print(response.status_code)
         assert response.status_code == 200, 'request failed'
 
         cid_group = None
@@ -39,20 +40,21 @@ if __name__ == '__main__':
     spider = BulletSpider(bv_name=bv_name)
     
     # get cid
-    cid = None
-    while cid is None:
-        print('try to get cid ...')
-        cid = spider.get_cid()
-        if cid is None:
-            time.sleep(random.randint(1, 3))
-    print(f'cid: {cid}')
+    # cid = None
+    # while cid is None:
+    #     print('try to get cid ...')
+    #     cid = spider.get_cid()
+    #     if cid is None:
+    #         time.sleep(random.randint(1, 3))
+    # print(f'cid: {cid}')
+    cid = 569634018
     
     # get bullet list
     bullet_list = spider.get_bullet_list(cid)
     print(f'bullet number: {len(bullet_list)}')
     
     # write to file
-    with open(f'./front/public/bullets/{bv_name}_bullet.json', 'w') as file:
+    with open(f'./front/public/data/bullets/{bv_name}_bullet.json', 'w') as file:
         json.dump({'bullet_list': bullet_list}, file, ensure_ascii=False)
     util.get_high_freq_word_list(bv_name)
     

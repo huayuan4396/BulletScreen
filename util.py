@@ -5,8 +5,8 @@ import json
 import csv
 
 
-def get_high_freq_word_list(bv_name, topk=100):
-    with open(f'./front/public/bullets/{bv_name}_bullet.json', 'r') as file:
+def get_high_freq_word_list(bv_name, topk=150):
+    with open(f'./front/public/data/bullets/{bv_name}_bullet.json', 'r') as file:
         data = file.read()
         
     data = re.findall('[\u4e00-\u9fa5]+', data, re.S)
@@ -39,7 +39,7 @@ def get_high_freq_word_list(bv_name, topk=100):
 
 
 if __name__ == '__main__':
-    print(get_high_freq_word_list('BV1gG41127D9'))
+    print(get_high_freq_word_list('BV1RS4y1A7nV'))
     # with open('./tag_dict.csv', 'r', encoding='gbk') as f:
     #     reader = csv.reader(f)
     #     tag_name = None
